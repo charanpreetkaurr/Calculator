@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		
+		.back{
+			background-color: #e6f0ff 
+;
+		}
+		
+
+		.text h2{
+			font-size : 80px;
+			color:  #145214;
+		}
+
+		.text h4{
+			font-size : 30px;
+			font-family: arial;
+		}
+
+		.font{
+			font-size: 30px;
+		}
+
+		form{
+			font-size: 30px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+	<script type="text/javascript">
+		
+		const corr = ['HyperText Markup Language','HTML, Head, Title, Body','/','an empty tag.','< and >','horizontal ruler','id','disc, circle, square','style','.html'];
+
+		
+
+		function changebackground1(){
+		document.body.style.backgroundColor = '#ffcccc';
+		}
+
+		function changebackground2(){
+		document.body.style.backgroundColor = '#d6f5d6';
+		}
+
+
+		function myFunction(){
+			
+			var score = 0;
+
+			let q1 = document.ques.ques1.value
+			if(q1 == corr[0]){
+			  score++;
+			}
+
+			let q2 = document.ques.ques2.value
+			if(q2 == corr[1]){
+			  score++;
+			}
+
+			let q3 = document.ques.ques3.value
+			if(q3 == corr[2]){
+			  score++;
+			}
+
+			let q4 = document.ques.ques4.value
+			if(q4 == corr[3]){
+			  score++;
+			}
+
+			let q5 = document.ques.ques5.value
+			if(q5 == corr[4]){
+			  score++;
+			}
+
+			let q6 = document.ques.ques6.value
+			if(q6 == corr[5]){
+			  score++;
+			}
+
+			let q7 = document.ques.ques7.value
+			if(q7 == corr[6]){
+			  score++;
+			}
+
+			let q8 = document.ques.ques8.value
+			if(q8 == corr[7]){
+			  score++;
+			}
+
+			let q9 = document.ques.ques9.value
+			if(q9 == corr[8]){
+			  score++;
+			}
+
+			let q10 = document.ques.ques10.value
+			if(q10 == corr[9]){
+			  score++;
+			}
+			
+			
+			let result = document.getElementById("score");
+            result.textContent =`Your score:  ${score}`
+
+            let grade = document.getElementById("grade");
+            
+            if(score<5){
+            	changebackground1();
+            	grade.style.color = `red`
+            	grade.textContent = `Fail`
+
+            }
+            if (score>=5 && score<=10) {
+            	changebackground2();
+            	grade.style.color = `darkgreen`
+            	grade.textContent = `Pass`
+            }
+
+		}
+
+	</script>
+</head>
+<body class="back">
+	
+	<div class="container">
+	<div class="row">
+	<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+	<div class="jumbotron text text-center">
+		<h2>10 Main Questions</h2>
+		<h4>Based on HTML</h4>
+	</div>
+	<form name="ques" onsubmit="return false">
+		<p class="well well-sm font">1. Full form of HTML is</p>
+		<input type="radio" name="ques1" value="HighText Machine Language">  HighText Machine Language<br>
+		<input type="radio" name="ques1" value="HyperText and links Markup Language">  HyperText and links Markup Language<br>
+		<input type="radio" name="ques1" value="HyperText Markup Language">  HyperText Markup Language<br>
+		<input type="radio" name="ques1" value="None of these">  None of these<br>
+	<br/>
+	<br/>
+		<p class="well well-sm font">2. The correct sequence of HTML tags for starting a webpage is -</p>
+		<input type="radio" name="ques2" value="Head, Title, HTML, body">  Head, Title, HTML, body<br>
+		<input type="radio" name="ques2" value="HTML, Body, Title, Head">  HTML, Body, Title, Head<br>
+		<input type="radio" name="ques2" value="HTML, Head, Title, Body">  HTML, Head, Title, Body<br>
+		<input type="radio" name="ques2" value="HTML, Head, Title, p">  HTML, Head, Title, p<br>
+<br/>
+<br/>
+		<p class="well well-sm font">3. Which character is used to represent the closing of a tag in HTML?</p>
+		<input type="radio" name="ques3" value="\">  \<br>
+		<input type="radio" name="ques3" value="!">  !<br>
+		<input type="radio" name="ques3" value="/">  /<br>
+		<input type="radio" name="ques3" value=".">  .<br>
+<br/>
+		<p class="well well-sm font">4. input is -</p>
+		<input type="radio" name="ques4" value="a format tag.">  a format tag.<br>
+		<input type="radio" name="ques4" value="an empty tag.">  an empty tag.<br>
+		<input type="radio" name="ques4" value="All of the above">  All of the above<br>
+		<input type="radio" name="ques4" value="None of the above">  None of the above<br>
+
+<br/>
+<br/>
+		<p class="well well-sm font">5. HTML tags are enclosed in-</p>
+		<input type="radio" name="ques5" value="# and #">  # and #<br>
+		<input type="radio" name="ques5" value="{ and }">  { and }<br>
+		<input type="radio" name="ques5" value="! and ?">  ! and ?<br>
+		<input type="radio" name="ques5" value="< and >">  < and ><br>
+<br/>
+<br/>
+		<p class="well well-sm font">6.The hr tag in HTML is used for -</p>
+		<input type="radio" name="ques6" value="new line">  new line<br>
+		<input type="radio" name="ques6" value="vertical ruler">  vertical ruler<br>
+		<input type="radio" name="ques6" value="new paragraph">  new paragraph<br>
+		<input type="radio" name="ques6" value="horizontal ruler">  horizontal ruler<br>
+<br/>
+<br/>
+		<p class="well well-sm font">7. Which of the following attribute is used to provide a unique name to an element?</p>
+		<input type="radio" name="ques7" value="class">  class<br>
+		<input type="radio" name="ques7" value="id">  id<br>
+		<input type="radio" name="ques7" value="type">  type<br>
+		<input type="radio" name="ques7" value="none of these">  none of these<br>
+		
+<br/>
+<br/>
+		<p class="well well-sm font">8. What are the types of unordered or bulleted list in HTML?</p>
+		<input type="radio" name="ques8" value="disc, square, triangle">  disc, square, triangle<br>
+		<input type="radio" name="ques8" value="polygon, triangle, circle">  polygon, triangle, circle<br>
+		<input type="radio" name="ques8" value="disc, circle, square">  disc, circle, square<br>
+		<input type="radio" name="ques8" value="All of the above">  All of the above<br>
+		<br/>
+		<br/>
+		<p class="well well-sm font">9. Which of the following HTML attribute is used to define inline styles?</p>
+		<input type="radio" name="ques9" value="style">  style<br>
+		<input type="radio" name="ques9" value="type">  type<br>
+		<input type="radio" name="ques9" value="class">  class<br>
+		<input type="radio" name="ques9" value="None of the above">  None of the above<br>
+		<br/>
+		<br/>
+
+		<p class="well well-sm font">10. An HTML program is saved by using the ____ extension.</p>
+		<input type="radio" name="ques10" value=".ht">  .ht<br>
+		<input type="radio" name="ques10" value=".html">  .html<br>
+		<input type="radio" name="ques10" value=".hml">  .hml<br>
+		<input type="radio" name="ques10" value="None of the above">  None of the above<br>
+<br/>
+<br/>
+		<button onclick="myFunction()">Submit Your Test</button>
+		<br>
+	    <i id="score"></i><br/>
+	    <i id="grade"></i>
+	</form>
+    </div>
+    </div>
+</div>
+</body>
+</html>

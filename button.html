@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var c = confirm("Do you want to continue");
+			if(c != true){
+				window.close();
+			}
+			$(".b").hide();
+			$(".a").click(function(){
+				$(".b").show();
+				$(".a1").hide();
+			})
+			$(".b").click(function(){
+				$(".b").hide();
+				$(".a1").show();
+			})
+		})
+	</script>
+
+	<style type="text/css">
+		
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#main{
+			display: flex;
+
+
+		}
+
+		.jumbotron{
+			
+			background-color:  #ffe6e6;
+		}
+
+		.tr{
+		 	
+
+		}
+
+		.a1,.b1{
+			border: none;
+			background-color: transparent;
+		}
+	</style>
+</head>
+<body>
+	<div class="jumbotron"><h1 align="center"><i class="tr">Frequently</i> Asked Question</h1></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12 col-lg-12 col-md-12">
+				
+	<div id="main">
+		<div class="a">html &nbsp;<button class="a1 fa fa-angle-down"></button></div>
+		<div class="b"><button class="b1 fa fa-angle-up"></button><br>html</div>
+	</div>
+	</div>
+	</div>
+    </div>
+</body>
+</html>

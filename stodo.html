@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	
+	function enter(){
+		
+
+
+		text = document.getElementById('text').value.length;
+
+		if(text == 0){
+			alert('enter Something')
+		}
+
+		else{
+
+
+			text1 = document.getElementById('text').value;
+			ul = document.getElementById('ul');
+			li = document.createElement('li');
+			text3 = document.createTextNode(text1);
+			bt = document.createElement('button');
+			sbt = document.createTextNode('\u00D7')
+
+			li.appendChild(text3);
+			bt.appendChild(sbt);
+			li.appendChild(bt);
+			ul.appendChild(li);
+
+			bt.onclick = function(){
+				li.remove();
+			}
+		}
+		
+
+	}	
+
+</script>
+	<title>
+		To do list
+	</title>
+</head>
+<body>
+	<div class="jumbotron text-center">
+		<h1>To Do list</h1>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+				<input type="text" name="" placeholder="Enter Your List Type" onfocusout="this.value=''" id="text">
+				<button onclick="enter()">Enter</button>
+				<ul id="ul">
+				
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

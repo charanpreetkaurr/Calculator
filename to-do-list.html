@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To do list</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			
+
+		}
+
+		.container {
+			text-align: center;
+			background-color:  #ccffee;
+			height: auto;
+			width: auto;
+			border-radius: 50px;
+		}
+
+		#ts{
+
+			padding-top: 50px;
+			font-size: 70px;
+			text-shadow: 0 0 3px #FF0000, 0 0 5px #ffebe6;
+			font-family: Optima;
+			font-weight: bold;
+			color:  white;
+		}
+
+		#m{
+			margin-top: 50px;
+		}
+
+		input{
+			
+			height: 50px;
+			width: 700px;
+			border-radius: 10px;
+			border: none;
+			margin-bottom: 20px;
+		}
+
+		
+
+		input[placeholder]{
+			padding-left: 20px;
+			font-size: 20px;
+
+		}
+
+		#a {
+			height: 55px;
+			width: 70px;
+			font-size: 20px;
+			border-radius: 10px;
+			background-color:  #ffffcc;
+			border: none;
+			font-weight: bold;
+			color: #006666
+;
+		}
+
+		ul{
+		
+			
+			width: auto;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			}
+
+			li{
+				
+				text-align: left;
+				padding-left: 15px;
+				height: auto;
+				width: 900px;
+				border-radius: 10px;
+				font-size: 30px;
+				margin-bottom: 20px;
+				background-color:  #ffb3b3;
+				color: white;
+				text-transform: capitalize;
+
+			}
+			li button{
+				position: fixed;
+				right: 330px;
+				margin-top: -15px;
+				font-size: 45px;
+				border: none;
+				background-color: transparent;
+				color: red;
+				cursor: pointer;
+				
+			}
+	</style>
+	<script type="text/javascript">
+		
+		
+		function show(){
+			var inp = document.getElementById('text').value.length
+			if( inp == 0){
+				alert('plzz Enter something')
+			}
+
+			else{
+			
+			const list=document.getElementById("ul");
+			const l=document.getElementById("text").value;
+			const li=document.createElement("li");
+			const t=document.createTextNode(l);
+			const button=document.createElement("button");
+			const close=document.createTextNode("\u00D7");
+			
+
+			li.appendChild(t);
+			list.appendChild(li);
+			button.appendChild(close);
+			li.appendChild(button);
+
+			button.onclick = function(){
+				li.remove()
+			}
+			}	
+
+
+			}
+	</script>
+</head>
+<body>
+
+   <div class="container">
+   	<div class="row">
+   		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+   		<div id="ts">My To Do List Collection</div>
+   		
+   		<div id="m">
+   			<input type="text" id="text" placeholder="Enter you task">
+   			<button onclick="show()" id="a">ADD</button>
+   		</div>
+   		<div>
+   			<ul id="ul">
+   				
+   			</ul>
+   		</div>
+   	
+   	</div>
+  </div>
+</div>
+</body>
+</html>

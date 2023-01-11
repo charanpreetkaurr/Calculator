@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slide Toggle Hide And Show</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <style type="text/css">
+            body {
+                background-color: #fffae6;
+            }
+
+            .jumbotron {
+                background-color: #ffd9b3;
+            }
+
+            .jumbotron h1 {
+                font-size: 70px;
+                color: #fcba03;
+                text-shadow: 5px 5px #cc6600;
+            }
+
+            .main {
+                margin-top: 10px;
+                display: flex;
+                height: auto;
+                width: 100%;
+                border: 1px solid;
+                font-size: 25px;
+                font-weight: bold;
+                background-color: lightgrey;
+            }
+
+            .ques {
+                width: 95%;
+            }
+
+            .ans {
+                text-align: center;
+                height: auto;
+                width: 100%;
+                border: 1px solid;
+                margin-top: 10px;
+                font-size: 20px;
+                background-color: #F5F5F5;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Hide And Show With Slide Toggle</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+
+
+                    <div class="s">
+                        <div class="main">
+                            <div id="q1" class="ques"> 1. What is jQuery?</div>
+                            <div>
+                                <b id="b1">+</b>
+                            </div>
+                        </div>
+                        <div class="ans">jQuery is a JavaScript library that makes it easy to create dynamic web pages. It helps in making web apps more efficient and interactive. It also helps to speed up the development process by providing a set of functions that can be used to manipulate data. It is a lightweight library that can be easily integrated into any website.</div>
+                    </div>
+
+
+
+                    <div class="s">
+                        <div class="main">
+                            <div id="q1" class="ques"> 2. What is jQuery used for?</div>
+                            <div>
+                                <b id="b2">+</b>
+                            </div>
+                        </div>
+                        <div class="ans">For building dynamic web pages, utilize JQuery. It can be applied to the development of interactive websites that are simple to use and navigate. It also makes it easy to add animations and transitions to your pages. With the help of jQuery, you can perform many basic activities that would otherwise require numerous lines of JavaScript code by calling methods instead.</div>
+                    </div>
+
+
+
+
+                    <div class="s">
+                        <div class="main">
+                            <div id="q1" class="ques"> 3. Is jQuery a JavaScript or JSON library file?</div>
+                            <div>
+                                <b id="b3">+</b>
+                            </div>
+                        </div>
+                        <div class="ans">jQuery is said to be a library of single JavaScript files which consists of DOM/CSS manipulations, event effects or animations, AJAX functions and various commonly used plugins.</div>
+                    </div>
+
+
+
+                    <div class="s">
+                        <div class="main">
+                            <div id="q1" class="ques">4. What is jQuery Mobile?</div>
+                            <div>
+                                <b id="b4">+</b>
+                            </div>
+                        </div>
+                        <div class="ans">Query Mobile is a JavaScript library that enables developers to create mobile-first applications. It is a lightweight framework that allows developers to create rich, touch-first interfaces that are optimized for touch devices.</div>
+                    </div>
+
+
+
+
+                    <div class="s">
+                        <div class="main">
+                            <div id="q1" class="ques"> 5. Describe jQuery Connect in brief. Also, list its uses.</div>
+                            <div>
+                                <b id="b5">+</b>
+                            </div>
+                        </div>
+                        <div class="ans">JQuery connect is a JavaScript library that provides a declarative API for binding data to elements. It allows you to specify the data source, the element that should be bound to the data, and the callback function that will be invoked when the element is bound. </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+           	$(document).on('click','b', function() { //$('b').click(function(){})-eh sari jgah ni chlda tahi apa inj //likhde hn,'on' jo h na onclick,onkeypress etc ehna da hai,'click' jo ha oh onclick lyi ds reha h,je 
+            //onkeypress hunda te apa 'keypress' likhde,'b' jo h oh 'b tag' j jithe mai  "+" likhya h oh h, mtlb mai sare 
+            //question de b tag te onclick function chlaya h, okh ji....
+
+           		var bta = $(this).html()  //fr apa ".html" laya h na te mtlb apa us id da written part mngva leya,okh 
+                //ji aur ohnu bta tag ch le leya h        
+
+           		if(bta == "+"){           //hun ede ch apa 'if' lake puchya h ki agr 'bta' ch '+' likhya h te
+            		$(this).html("-")     // ohnu '-' krdo
+           		}
+           		else if(bta == "-"){      // je "-" h 
+           			$(this).html("+")     // te "+" krdo
+           		}
+
+                // hun parent() tag jeda h na oh parent dekhda h mtlb oh jide lyi laa rhe ho na ode ute vali <div> select krda h mtlb neeche dekho
+
+
+                // apa na parent() do tareeke nl likh skde hn okh dono h neeche
+                /* 
+                    example :
+
+                    <div>
+
+                        <div class="main">
+
+                        <div id="q1"></div>
+
+                        <div> <b id="b1"> </b> </div>        "apa ute $(this) krke 'b tag' le rhe hn na te apa parent tag 
+                                                            use  krange"
+                        </div>
+                                                         # PHLA TAREEKA 
+                                                         STEP 1 : jine <div> h ohni vari parent() likho jive ode ute tin div hai ik di id "q1", duji class h "main", fr ode ute IK KHALI DIV H.. 
+                                                         
+                                                         hun tuc dekho jedi eh div h <div> ede andr hi sari div bnd ho rhi h te eh function oh div te jake agla step krega 
+                                                         te apa likhnge....
+                                                         $(this).parent().parent().parent() 
+
+                                                         STEP 2 : hun apa likhnge .find() te ode andr oh class likhnge jo ans ch likhi h mtlb.. 
+                                                         ede ch oh ki krega ki find krega mtlb lbega jedi id ya class tuc paoge jive apa class="ans" vali liti h   
+                       <div class="ans"></div>           -- eh vali , eve,
+                                                        $(this).parent().parent().parent().find(".ans")
+                    </div>                              
+
+                                                        LAST STEP : .slideToggle() eh te tuhanu pta hi h hainnaaa...
+
+                                                         $(this).parent().parent().parent().find(".ans").slideToggle()
+
+                                                        mtlb hun oh class="ans" eh vali nu slideToggle() krega okh jiiii
+
+
+
+
+        \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+                                                        
+                                                        #DUJA TAREEKA
+                    <div class="s">
+                                                        eh vala tareeka hai simple jeda apa kita h
+
+                        <div class="main">              
+
+                        <div id="q1"></div>
+
+                        <div> <b id="b1"> </b> </div>   STEP 1 : ede ch apa $(this) krke "b tag lita h"
+                        
+                        <div>                           STEP 2 : fr sanu pata h ki jedi div ch sadi jiv h...
+                                                                te apa oh div nu ik class deti h mtlb
+                                                                class="s" eh vali te apa sida hi parent ch 
+                                                                oh class leli h 
+                                                                $(this).parents('.s')
+
+                                                                STEP 3 : hun apa ohi find krnge .find() nl
+                        <div class="ans"></div>             --- eh vali  $(this).parents('.s').find('.ans') inj 
+
+                                                        LAST STEP : .slideToggle() eh kr dnge
+                                                                    $(this).parents('.s').find('.ans').slideToggle(); inj 
+                    </div>  
+
+                 */
+
+           		$(this).parents('.s').find('.ans').slideToggle();
+
+
+            })
+        });
+    </script>
+</html>
